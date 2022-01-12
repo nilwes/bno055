@@ -12,7 +12,7 @@ import i2c
 import ..src.bno055 as bno055
 
 main:
-  euler        := [0.0,0.0,0.0]
+  euler := [0.0,0.0,0.0]
 
   bus := i2c.Bus
     --sda=gpio.Pin 21
@@ -22,7 +22,7 @@ main:
   sensor := bno055.Driver device
 
   euler = sensor.read_euler
-  print_ "Heading: $(%6.1f euler[0]), Roll: $(%6.1f euler[1]), Pitch: $(%6.1f euler[2])"
+  print "Heading: $(%6.1f euler[0]), Roll: $(%6.1f euler[1]), Pitch: $(%6.1f euler[2])"
 
 ```
 
