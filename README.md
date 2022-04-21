@@ -1,8 +1,10 @@
-# BNO055 Toit Driver
+# BNO055
 
-A Toit driver for the Bosch BNO055 sensor. 
+A Toit driver for the Bosch BNO055 absolute orientation sensor.
 
-The smart sensor BNO055 is a System in Package (SiP) solution that integrates a triaxial 14-bit accelerometer, an accurate close-loop triaxial 16-bit gyroscope, a triaxial geomagnetic sensor and a 32-bit microcontroller running the BSX3.0 FusionLib software. This smart sensor is significantly smaller than comparable solutions. By integrating sensors and sensor fusion in a single device, the BNO055 makes integration easy, avoids complex multivendor solutions and thus simplifies innovations, e.g. novel applications such as IoT hardware. The BNO055 is the perfect choice for AR, immersive gaming, personal health and fitness, indoor navigation and any other application requiring context awareness. It is ideally suited for demanding applications such as augmented reality, navigation, gaming, robotics, or industrial applications.
+The BNO055 is features an accelerometer, gyroscope, and a geomagnetic sensor. The sensor
+  is packaged with an ARM Cortex-M0 based processor which digests all the data and
+  provides easy-to-use quaternions, Euler angles or vectors.
 
 ## Usage
 
@@ -11,7 +13,7 @@ A simple usage example.
 ```
 import gpio
 import i2c
-import ..src.bno055 as bno055
+import bno055
 
 main:
   euler := [0.0,0.0,0.0]
@@ -29,6 +31,10 @@ main:
 ```
 
 See the `examples` folder for more examples.
+
+## References
+
+Datasheet: https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bno055-ds000.pdf
 
 ## Features and bugs
 
