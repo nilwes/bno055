@@ -153,7 +153,7 @@ class Driver:
     return read_acceleration
 
   /**
-  Returns the gravity reading (in m/s^2) for the x, y, and z-plane in
+  Returns the gravity reading (in m/s^2) for the x, y, and z-directions in
     a three element list.
   */
   read_gravity -> List:
