@@ -1,0 +1,5 @@
+prefixes:
+  bno055: ..
+packages:
+  ..:
+    path: ..
