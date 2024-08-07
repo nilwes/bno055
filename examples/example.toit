@@ -11,20 +11,20 @@ main:
     --sda=gpio.Pin 21
     --scl=gpio.Pin 22
 
-  device := bus.device bno055.I2C_ADDRESS
+  device := bus.device bno055.I2C-ADDRESS
   sensor := bno055.Driver device
 
-  units := sensor.read_units
+  units := sensor.read-units
   print "Units: $units"
 
   while true:
-    euler        := sensor.read_euler
-    gyro         := sensor.read_gyro
-    linacc       := sensor.read_acceleration
-    gravity      := sensor.read_gravity
-    quaternion   := sensor.read_quaternion
-    magnetometer := sensor.read_magnetometer
-    calibration  := sensor.read_calibration
+    euler        := sensor.read-euler
+    gyro         := sensor.read-gyro
+    linacc       := sensor.read-acceleration
+    gravity      := sensor.read-gravity
+    quaternion   := sensor.read-quaternion
+    magnetometer := sensor.read-magnetometer
+    calibration  := sensor.read-calibration
 
     print_ "Heading: $(%6.1f euler[0]), Roll: $(%6.1f euler[1]), Pitch: $(%6.1f euler[2])"
     //print_ "Acc X:   $(%7f gyro[0]), Acc Y:  $(%7f gyro[1]), Acc Z:    $(%7f gyro[2])"
