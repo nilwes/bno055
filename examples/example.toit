@@ -2,14 +2,13 @@
 // Use of this source code is governed by a MIT-style license that can be found
 // in the LICENSE file.
 
-import gpio
 import i2c
 import bno055
 
 main:
   bus := i2c.Bus
-    --sda=gpio.Pin 21
-    --scl=gpio.Pin 22
+    --sda=21
+    --scl=22
 
   device := bus.device bno055.I2C-ADDRESS
   sensor := bno055.Driver device
