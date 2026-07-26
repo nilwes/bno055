@@ -2,4 +2,4 @@ name: bno055
 description: Driver for the Bosch BNO055 sensor.
 
 environment:
-  sdk: ^2.0.0-alpha.194.1
+  sdk: ^2.0.0-alpha.196
